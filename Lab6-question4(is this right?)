@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int i,siz,j;
+	siz = 0;
+	char a = 'w';
+	string name = " ";
+	cout <<"Enter your name\n";
+	cin >>name;
+	char *ptr = &name[0];
+	siz = name.size();
+	cout <<"Characters of string by index method\n";
+	for (i = 0; i<siz; i++)
+	{
+		a = name[i];
+		cout <<a<<endl;
+	}
+	cout <<"Characters of string by pointer method\n";
+	for (j = 0;j<siz;j++)
+	{
+		cout<<*(ptr + j)<<endl;
+	}
+}
